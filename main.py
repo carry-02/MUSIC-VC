@@ -68,7 +68,7 @@ async def repo(_, message: Message):
     filters.command("ping", config.PREFIXES) & filters.group & ~filters.edited
 )
 @handle_error
-async def ping(_, message: Message):
+async def pong(_, message: Message):
     await message.reply_text(f"🤖 **Pong!**\n`{await pytgcalls.ping} ms`")
 
 
